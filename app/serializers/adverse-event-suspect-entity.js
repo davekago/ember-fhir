@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/serializers/adverse-event-suspect-entity';

@@ -1,0 +1,42 @@
+import BackboneElementSerializer from 'ember-fhir/serializers/backbone-element';
+
+export default BackboneElementSerializer.extend({
+  attrs: {
+    defaultValueElement: { embedded: 'always' },
+    defaultValueExtension: { embedded: 'always' },
+    defaultValueBackboneElement: { embedded: 'always' },
+    defaultValueNarrative: { embedded: 'always' },
+    defaultValueAnnotation: { embedded: 'always' },
+    defaultValueAttachment: { embedded: 'always' },
+    defaultValueIdentifier: { embedded: 'always' },
+    defaultValueCodeableConcept: { embedded: 'always' },
+    defaultValueCoding: { embedded: 'always' },
+    defaultValueQuantity: { embedded: 'always' },
+    defaultValueDuration: { embedded: 'always' },
+    defaultValueSimpleQuantity: { embedded: 'always' },
+    defaultValueDistance: { embedded: 'always' },
+    defaultValueCount: { embedded: 'always' },
+    defaultValueMoney: { embedded: 'always' },
+    defaultValueAge: { embedded: 'always' },
+    defaultValueRange: { embedded: 'always' },
+    defaultValuePeriod: { embedded: 'always' },
+    defaultValueRatio: { embedded: 'always' },
+    defaultValueReference: { embedded: 'always' },
+    defaultValueSampledData: { embedded: 'always' },
+    defaultValueSignature: { embedded: 'always' },
+    defaultValueHumanName: { embedded: 'always' },
+    defaultValueAddress: { embedded: 'always' },
+    defaultValueContactPoint: { embedded: 'always' },
+    defaultValueTiming: { embedded: 'always' },
+    defaultValueMeta: { embedded: 'always' },
+    defaultValueElementDefinition: { embedded: 'always' },
+    defaultValueContactDetail: { embedded: 'always' },
+    defaultValueContributor: { embedded: 'always' },
+    defaultValueDosage: { embedded: 'always' },
+    defaultValueRelatedArtifact: { embedded: 'always' },
+    defaultValueUsageContext: { embedded: 'always' },
+    defaultValueDataRequirement: { embedded: 'always' },
+    defaultValueParameterDefinition: { embedded: 'always' },
+    defaultValueTriggerDefinition: { embedded: 'always' }
+  }
+});

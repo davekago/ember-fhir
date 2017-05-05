@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/models/naming-system-unique-id';

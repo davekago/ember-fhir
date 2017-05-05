@@ -1,0 +1,46 @@
+import DS from 'ember-data';
+import DomainResource from 'ember-fhir/models/domain-resource';
+
+const { attr, belongsTo, hasMany } = DS;
+
+export default DomainResource.extend({
+  identifier: hasMany('identifier', { async: true }),
+  status: attr('string'),
+  type_: belongsTo('codeable-concept', { async: false }),
+  subType: hasMany('codeable-concept', { async: true }),
+  patient: belongsTo('reference', { async: false }),
+  billablePeriod: belongsTo('period', { async: false }),
+  created: attr('date'),
+  enterer: belongsTo('reference', { async: false }),
+  insurer: belongsTo('reference', { async: false }),
+  provider: belongsTo('reference', { async: false }),
+  organization: belongsTo('reference', { async: false }),
+  referral: belongsTo('reference', { async: false }),
+  facility: belongsTo('reference', { async: false }),
+  claim: belongsTo('reference', { async: false }),
+  claimResponse: belongsTo('reference', { async: false }),
+  outcome: belongsTo('codeable-concept', { async: false }),
+  disposition: attr('string'),
+  related: hasMany('explanation-of-benefit-related', { async: true }),
+  prescription: belongsTo('reference', { async: false }),
+  originalPrescription: belongsTo('reference', { async: false }),
+  payee: belongsTo('explanation-of-benefit-payee', { async: false }),
+  information: hasMany('explanation-of-benefit-information', { async: true }),
+  careTeam: hasMany('explanation-of-benefit-care-team', { async: true }),
+  diagnosis: hasMany('explanation-of-benefit-diagnosis', { async: true }),
+  procedure: hasMany('explanation-of-benefit-procedure', { async: true }),
+  precedence: attr('number'),
+  insurance: belongsTo('explanation-of-benefit-insurance', { async: false }),
+  accident: belongsTo('explanation-of-benefit-accident', { async: false }),
+  employmentImpacted: belongsTo('period', { async: false }),
+  hospitalization: belongsTo('period', { async: false }),
+  item: hasMany('explanation-of-benefit-item', { async: true }),
+  addItem: hasMany('explanation-of-benefit-add-item', { async: true }),
+  totalCost: belongsTo('money', { async: false }),
+  unallocDeductable: belongsTo('money', { async: false }),
+  totalBenefit: belongsTo('money', { async: false }),
+  payment: belongsTo('explanation-of-benefit-payment', { async: false }),
+  form: belongsTo('codeable-concept', { async: false }),
+  processNote: hasMany('explanation-of-benefit-process-note', { async: true }),
+  benefitBalance: hasMany('explanation-of-benefit-benefit-balance', { async: true })
+});

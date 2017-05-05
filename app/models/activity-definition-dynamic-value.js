@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/models/activity-definition-dynamic-value';

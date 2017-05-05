@@ -1,0 +1,43 @@
+import BackboneElementSerializer from 'ember-fhir/serializers/backbone-element';
+
+export default BackboneElementSerializer.extend({
+  attrs: {
+    type_: { embedded: 'always' },
+    valueElement: { embedded: 'always' },
+    valueExtension: { embedded: 'always' },
+    valueBackboneElement: { embedded: 'always' },
+    valueNarrative: { embedded: 'always' },
+    valueAnnotation: { embedded: 'always' },
+    valueAttachment: { embedded: 'always' },
+    valueIdentifier: { embedded: 'always' },
+    valueCodeableConcept: { embedded: 'always' },
+    valueCoding: { embedded: 'always' },
+    valueQuantity: { embedded: 'always' },
+    valueDuration: { embedded: 'always' },
+    valueSimpleQuantity: { embedded: 'always' },
+    valueDistance: { embedded: 'always' },
+    valueCount: { embedded: 'always' },
+    valueMoney: { embedded: 'always' },
+    valueAge: { embedded: 'always' },
+    valueRange: { embedded: 'always' },
+    valuePeriod: { embedded: 'always' },
+    valueRatio: { embedded: 'always' },
+    valueReference: { embedded: 'always' },
+    valueSampledData: { embedded: 'always' },
+    valueSignature: { embedded: 'always' },
+    valueHumanName: { embedded: 'always' },
+    valueAddress: { embedded: 'always' },
+    valueContactPoint: { embedded: 'always' },
+    valueTiming: { embedded: 'always' },
+    valueMeta: { embedded: 'always' },
+    valueElementDefinition: { embedded: 'always' },
+    valueContactDetail: { embedded: 'always' },
+    valueContributor: { embedded: 'always' },
+    valueDosage: { embedded: 'always' },
+    valueRelatedArtifact: { embedded: 'always' },
+    valueUsageContext: { embedded: 'always' },
+    valueDataRequirement: { embedded: 'always' },
+    valueParameterDefinition: { embedded: 'always' },
+    valueTriggerDefinition: { embedded: 'always' }
+  }
+});

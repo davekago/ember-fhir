@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/models/graph-definition-link';

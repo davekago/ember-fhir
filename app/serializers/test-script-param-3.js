@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/serializers/test-script-param-3';

@@ -1,0 +1,9 @@
+import DS from 'ember-data';
+import BackboneElement from 'ember-fhir/models/backbone-element';
+
+const { hasMany } = DS;
+
+export default BackboneElement.extend({
+  reason: hasMany('codeable-concept', { async: true }),
+  reasonNotGiven: hasMany('codeable-concept', { async: true })
+});

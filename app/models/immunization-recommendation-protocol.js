@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/models/immunization-recommendation-protocol';

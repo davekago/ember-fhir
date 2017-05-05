@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/models/healthcare-service-not-available';

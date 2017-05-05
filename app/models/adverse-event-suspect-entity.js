@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/models/adverse-event-suspect-entity';

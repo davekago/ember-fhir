@@ -1,0 +1,41 @@
+import DomainResourceSerializer from 'ember-fhir/serializers/domain-resource';
+
+export default DomainResourceSerializer.extend({
+  attrs: {
+    identifier: { embedded: 'always' },
+    type_: { embedded: 'always' },
+    subType: { embedded: 'always' },
+    patient: { embedded: 'always' },
+    billablePeriod: { embedded: 'always' },
+    enterer: { embedded: 'always' },
+    insurer: { embedded: 'always' },
+    provider: { embedded: 'always' },
+    organization: { embedded: 'always' },
+    referral: { embedded: 'always' },
+    facility: { embedded: 'always' },
+    claim: { embedded: 'always' },
+    claimResponse: { embedded: 'always' },
+    outcome: { embedded: 'always' },
+    related: { embedded: 'always' },
+    prescription: { embedded: 'always' },
+    originalPrescription: { embedded: 'always' },
+    payee: { embedded: 'always' },
+    information: { embedded: 'always' },
+    careTeam: { embedded: 'always' },
+    diagnosis: { embedded: 'always' },
+    procedure: { embedded: 'always' },
+    insurance: { embedded: 'always' },
+    accident: { embedded: 'always' },
+    employmentImpacted: { embedded: 'always' },
+    hospitalization: { embedded: 'always' },
+    item: { embedded: 'always' },
+    addItem: { embedded: 'always' },
+    totalCost: { embedded: 'always' },
+    unallocDeductable: { embedded: 'always' },
+    totalBenefit: { embedded: 'always' },
+    payment: { embedded: 'always' },
+    form: { embedded: 'always' },
+    processNote: { embedded: 'always' },
+    benefitBalance: { embedded: 'always' }
+  }
+});

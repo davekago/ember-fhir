@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/models/imaging-study-instance';

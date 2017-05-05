@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/serializers/capability-statement-supported-message';

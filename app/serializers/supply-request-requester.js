@@ -1,0 +1,1 @@
+export { default } from 'ember-fhir/serializers/supply-request-requester';
