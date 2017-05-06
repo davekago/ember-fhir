@@ -12,12 +12,20 @@ This will add ember-fhir as a dependency in your package.json
 
 ## Reserved keywords
 
-Due to some collision with ember reserved words, e.g data, type etc., the following elements aremapped to `element_`. Future versions of this addon may change this behavior.
-* data => data_
-* container => container_
-* key => key_
-* trigger => trigger_
+Due to some collision with ember reserved words, e.g data, type etc., the following elements are mapped to `element_`. Future versions of this addon may change this behavior.
+
+| Element | Mapping |
+| --- | --- |
+| container | container_ |
+| data | data_ |
+| trigger | trigger_ |
+| type | kype_ |
 
 ## Contributing
 
 Feel free to fork this repository and issue PR's
+
+## Resources
+
+* [HL7 FHIR](http://hl7.org/fhir/)
+* [FHIR DSTU3 Resources](http://hl7.org/fhir/resourcelist.html)
