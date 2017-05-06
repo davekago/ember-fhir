@@ -1,6 +1,6 @@
 {
   "name": "ember-fhir",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Ember fhir adapter compatible with fhir dstu3 servers",
   "keywords": [
     "ember-addon",

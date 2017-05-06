@@ -35,7 +35,7 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 
   extractId(modelClass, resourceHash) {
     return get(resourceHash, 'id') ||
-      guidFor(get(modelClass, 'modelName'));
+      guidFor(resourceHash);
   },
 
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
