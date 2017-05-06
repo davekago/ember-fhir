@@ -1,27 +1,23 @@
-# ember-fhir
+# Ember-fhir
 
-Ember adapter for implementing hl7 fhir resources in Ember applications
+Ember FHIR adapter designed for simple and direct interraction with FHIR servers straight from the Ember front end.
+
+Includes models and serializers for all resources in FHIR DSTU3. For DSTU2 please see
+[Ember-fhir-adapter](https://github.com/intervention-engine/ember-fhir-adapter)
 
 ## Installation
+* `ember install ember-fhir`
 
-* `git clone <repository-url>` this repository
-* `cd ember-fhir`
-* `npm install`
-* `bower install`
+This will add ember-fhir as a dependency in your package.json
 
-## Running
+## Reserved keywords
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Due to some collision with ember reserved words, e.g data, type etc., the following elements aremapped to `element_`. Future versions of this addon may change this behavior.
+* data => data_
+* container => container_
+* key => key_
+* trigger => trigger_
 
-## Running Tests
+## Contributing
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+Feel free to fork this repository and issue PR's
