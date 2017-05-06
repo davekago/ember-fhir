@@ -1,22 +1,29 @@
 {
   "name": "ember-fhir",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "Ember fhir adapter compatible with fhir dstu3 servers",
   "keywords": [
     "ember-addon",
     "ember-fhir",
     "ember-fhir-adapter",
     "ember-hl7",
     "fhir",
-    "hl7"
+    "hl7",
+    "dstu3",
+    "stu3",
+    "ember-fhir-stu3",
+    "ember-fhir-dstu3",
+    "ember-dstu3",
+    "ember-stu3",
+    "fhir"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "David Kago",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/davekago/ember-fhir",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
