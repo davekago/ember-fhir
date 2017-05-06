@@ -15,6 +15,8 @@ const {
   typeOf
 } = Ember;
 
+const reserved = [ 'data', 'container', 'trigger', 'type' ];
+
 export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
   isNewSerializerAPI: true,
 
@@ -37,15 +39,6 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
   },
 
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
-    // fix reserved names e.g data
-    const reserved = [ 'data' ];
-    reserved.forEach((r) => {
-      if (payload.data.attributes[r]) {
-        payload.data.attributes[`${r}_`] = payload.data.attributes[r];
-        delete payload.data.attributes[r];
-      }
-    });
-
     let resourceArray = null,
       hash = {};
 
@@ -56,9 +49,17 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
     }
 
     resourceArray.forEach((resource) => {
+      // fix reserved names
+      reserved.forEach((property) => {
+        if (resource.hasOwnProperty(property)) {
+          resource[`${property}_`] = resource[property];
+          delete resource[property];
+        }
+      });
+
       const type = get(resource, 'resourceType').dasherize().pluralize();
-      if (isEmpty(get(hash, 'type'))) {
-        set(hash, 'type', A());
+      if (isEmpty(get(hash, type))) {
+        set(hash, type, A());
       }
 
       hash[type].push(resource);
