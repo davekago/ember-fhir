@@ -5,6 +5,10 @@ Ember FHIR adapter designed for simple and direct interraction with FHIR servers
 Includes models and serializers for all resources in FHIR DSTU3. For DSTU2 please see
 [Ember-fhir-adapter](https://github.com/intervention-engine/ember-fhir-adapter)
 
+## Demo/Usage
+
+[Demo](http://demo.ember-fhir.com)
+
 ## Installation
 * `ember install ember-fhir`
 
@@ -19,7 +23,7 @@ Due to some collision with ember reserved words, e.g data, type etc., the follow
 | container | container_ |
 | data | data_ |
 | trigger | trigger_ |
-| type | kype_ |
+| type | type_ |
 
 ## Contributing
 
