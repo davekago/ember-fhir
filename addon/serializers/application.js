@@ -43,7 +43,17 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
       hash = {};
 
     if (isEmpty(get(payload, 'entry'))) {
-      resourceArray = [ payload ];
+
+      // This is a query where nothing was returned.
+      // Create an empty array in the hash so that subsequent parsing doesn't complain that there are 0 expected objects
+      if (payload.total === 0) {
+        hash[Ember.String.pluralize(primaryModelClass.modelName)] = [];
+        return this._super(store, primaryModelClass, hash, id, requestType);
+      } else {
+        resourceArray = [ payload ];
+      }
+
+
     } else {
       resourceArray = get(payload, 'entry').mapBy('resource');
     }
