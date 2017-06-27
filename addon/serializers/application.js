@@ -40,7 +40,9 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
     let resourceArray = null,
-      hash = {};
+      hash = {
+        'meta': {},
+      };
 
     if (isEmpty(get(payload, 'entry'))) {
 
@@ -74,6 +76,16 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 
       hash[type].push(resource);
     });
+
+    if (payload.link) {
+      let meta = {};
+      payload.link.forEach(link => { meta[link.relation] = link.url; });
+      hash['meta']['pagination'] = meta;
+    }
+
+    if (payload.total) {
+      hash['meta']['total'] = payload.total;
+    }
 
     return this._super(store, primaryModelClass, hash, id, requestType);
   },
